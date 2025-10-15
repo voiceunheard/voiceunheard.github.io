@@ -6,6 +6,7 @@
     <title>Contact Us - VoiceUnheard</title>
     <style>
         /* General Body Styles */
+        /* General Body Styles */
         body {
             background-color: #FDF5E6; /* A light, creamy beige background */
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -13,13 +14,15 @@
             padding: 2em;
         }
 
+
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
+            max-width: 1920px;
             width: 100%;
+            margin: 0 auto; /* Add this line to center the container */
         }
 
-        /* --- Header Section (Consistent with other pages) --- */
+
+        /* --- Header Section (Copied from index.html) --- */
         header {
             display: flex;
             align-items: center;
@@ -42,15 +45,22 @@
             height: auto;
         }
         
-        .title-section h1 {
+        .title-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
             font-size: 2.5em;
             margin: 0;
+            padding: 0;
             color: #333;
         }
 
-        .title-section .tagline {
+        .tagline {
             font-size: 1.2em;
             margin: 0;
+            padding: 0;
             font-style: italic;
             color: #555;
         }
@@ -65,7 +75,7 @@
 
         nav a {
             text-decoration: none;
-            color: #8B0000;
+            color: #780000;
             font-weight: bold;
             font-size: 1.1em;
             padding: 5px;
@@ -74,7 +84,7 @@
         hr {
             border: 0;
             height: 2px;
-            background-color: #8B0000;
+            background-color: #780000;
             margin: 0.5em 0 2em 0;
         }
         /* --- End of Header Section --- */
@@ -86,6 +96,7 @@
             border: 1px solid #B0C4DE; /* Slightly darker blue border */
             padding: 2.5em;
             max-width: 850px;
+            border-radius: 8px;
             margin: 2em auto 0 auto; /* Adds space from the HR line and centers it */
         }
 
@@ -116,7 +127,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1em;
         }
 
         .box-footer-logo img {
@@ -125,9 +135,12 @@
         }
         
         .box-footer-logo span {
-            font-size: 1.8em;
+            font-size: 2.5em;
             font-weight: bold;
-            color: #8B0000; /* Red color to match logo */
+            color: #780000; /* Red color to match logo */
+            border-left: 2px solid #780000; /* Creates the red vertical line */
+            padding-left: 1em; /* Creates space between the line and the text */
+            margin-left: 1em; /* Creates space between the logo and the line */
         }
 
     </style>
@@ -148,7 +161,7 @@
             
             <nav>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="publications.html">Publications</a></li>  
                     <li><a href="aboutus.html">Who We Are</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
