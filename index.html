@@ -6,6 +6,7 @@
     <title>VoiceUnheard - Home</title>
     <style>
         /* General Body Styles */
+        /* General Body Styles */
         body {
             background-color: #FDF5E6; /* A light, creamy beige background */
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -13,11 +14,13 @@
             padding: 2em;
         }
 
+
         .container {
-            max-width: 1100px; /* Wider container for the new layout */
-            margin: 0 auto;
+            max-width: 1920px;
             width: 100%;
+            margin: 0 auto; /* Add this line to center the container */
         }
+
 
         /* --- Header Section (Copied from index.html) --- */
         header {
@@ -72,7 +75,7 @@
 
         nav a {
             text-decoration: none;
-            color: #8B0000;
+            color: #780000;
             font-weight: bold;
             font-size: 1.1em;
             padding: 5px;
@@ -81,7 +84,7 @@
         hr {
             border: 0;
             height: 2px;
-            background-color: #8B0000;
+            background-color: #780000;
             margin: 0.5em 0 2em 0;
         }
         /* --- End of Header Section --- */
@@ -92,6 +95,9 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr); 
             gap: 2em;
+            /* --- ADDED: Constrains the grid while allowing the header to be wider --- */
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         /* --- Clickable Card Styles (UPDATED FOR IMAGES) --- */
@@ -158,7 +164,7 @@
         <header>
             <div class="header-left">
                 <div class="logo">
-                    <img src="vu_logo.png" alt="VoiceUnheard Logo">
+                    <img src="images/vu_logo.png" alt="VoiceUnheard Logo">
                 </div>
                 <div class="title-section">
                     <h1>VoiceUnheard</h1>
@@ -168,10 +174,10 @@
             
             <nav>
                 <ul>
-                    <li><a href="home.html">Home</a></li> 
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="index.html">Publication</a></li> 
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html">Publications</a></li>  
+                    <li><a href="aboutus.html">Who We Are</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
