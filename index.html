@@ -3,47 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoiceUnheard - Iustitia</title>
+    <title>VoiceUnheard - Home</title>
     <style>
-        /* Do not ask for mobile support. Operations staff will remove your eyes with a spoon if you ask for mobile support. Do not give them the pleasure. */
         /* General Body Styles */
         body {
             background-color: #FDF5E6; /* A light, creamy beige background */
             font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 2em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1100px; /* Wider container for the new layout */
+            margin: 0 auto;
             width: 100%;
         }
 
-        /* Header Section */
+        /* --- Header Section (Copied from index.html) --- */
         header {
             display: flex;
-            align-items: center; /* Vertically align logo, text, and nav */
+            align-items: center;
+            justify-content: space-between;
             margin-bottom: 0.5em;
         }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
 
-/* UPDATED: Logo Styles */
         .logo {
-            margin-right: 1.2em;
-            width: 80px; /* Adjust the width of your logo as needed */
+            margin-right: 1.5em;
+            width: 80px;
         }
 
         .logo img {
-            width: 100%; /* Makes the image fill the container */
-            height: auto; /* Maintains the image's aspect ratio */
+            width: 100%;
+            height: auto;
         }
-
-        /* You can completely DELETE the old .logo-v and .logo-u styles */
         
-
         .title-section {
             display: flex;
             flex-direction: column;
@@ -64,90 +62,115 @@
             color: #555;
         }
 
-        /* UPDATED: Navigation Bar Styles */
-        nav {
-            margin-left: auto; /* Push the nav to the far right of the header */
-        }
-
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
-            gap: 20px; /* Space between nav items */
+            gap: 20px;
         }
 
         nav a {
             text-decoration: none;
-            color: #8B0000; /* Use the red accent color for text */
+            color: #8B0000;
             font-weight: bold;
             font-size: 1.1em;
             padding: 5px;
-            transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #333; /* Darken text on hover */
-            text-decoration: underline;
-        }
-
-        /* UPDATED: Horizontal Rule */
         hr {
             border: 0;
             height: 2px;
             background-color: #8B0000;
-            margin: 0.5em 0 2em 0; /* Adjusted margin for new position */
+            margin: 0.5em 0 2em 0;
+        }
+        /* --- End of Header Section --- */
+
+
+        /* --- Homepage Grid Layout --- */
+        .homepage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 2em;
         }
 
-        /* Main Content Section */
-        .content-box {
-            background-color: #00334e; /* Dark teal/blue background */
-            color: #f0f0f0; /* Off-white text for better readability */
-            padding: 2em;
-            display: flex;
-            align-items: flex-start;
+        /* --- Clickable Card Styles (UPDATED FOR IMAGES) --- */
+        .card {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            color: white;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            
+            /* These properties control the background image */
+            background-size: cover;     /* Scales the image to cover the card */
+            background-position: center; /* Centers the image */
+            
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            min-height: 250px; /* Ensures cards have a consistent height */
         }
 
-        .image-placeholder {
-            background-color: #add8e6;
-            flex-shrink: 0;
-            width: 150px;
-            height: 250px;
-            margin-right: 2em;
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
-        .text-content {
-            flex-grow: 1;
+        /* Specific styles for the large, featured card */
+        .card.featured {
+            grid-column: 1 / 3; 
+            min-height: 350px; /* A bit taller for the featured card */
         }
 
-        .text-content h2 {
-            margin-top: 0;
+        /* Transparent Text Overlay */
+        .card-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1em 1.5em;
+            transition: background 0.3s ease; 
+        }
+
+        .card:hover .card-text {
+            background: rgba(0, 0, 0, 0.75);
+        }
+
+        .card-text h2 {
+            margin: 0;
             font-size: 1.8em;
-            font-weight: normal;
+            line-height: 1.2;
         }
 
-        .text-content p {
-            line-height: 1.6;
-            font-size: 1em;
+        .card-text p {
+            margin: 0.25em 0 0 0;
+            font-size: 0.9em;
+            opacity: 0.9;
         }
+
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <div class="logo">
-                <img src="vu_logo.png" alt="VoiceUnheard Logo">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="vu_logo.png" alt="VoiceUnheard Logo">
+                </div>
+                <div class="title-section">
+                    <h1>VoiceUnheard</h1>
+                    <p class="tagline">Iustitia: Let Justice Be Done</p>
+                </div>
             </div>
-            <div class="title-section">
-                <h1>VoiceUnheard</h1>
-                <p class="tagline">Iustitia: Let Justice Be Done</p>
-            </div>
+            
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li> 
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Publication</a></li>
+                    <li><a href="index.html">Publication</a></li> 
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -156,14 +179,39 @@
         <hr>
 
         <main>
-            <div class="content-box">
-                <div class="image-placeholder"></div>
-                <div class="text-content">
-                    <h2>Lorem Ipsum Dolor</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan. Sed vitae luctus arcu. Sed imperdiet facilisis enim ut feugiat. Suspendisse lacus felis, consequat ac gravida non, pulvinar ut erat. Phasellus commodo cursus hendrit. Cras venenatis lorem sit amet erat malesuada posuere. Proin tincidunt auctor dictum. Aliquam purus est, viverra eu dolor at, consequat condimentum lorem. Suspendisse potenti. Nulla at varius tellus.
-                    </p>
-                </div>
+            <div class="homepage-grid">
+                
+                <a href="entry-1.html" class="card featured" style="background-image: url('images/home-content-placeholderimage-small.png');">
+                    <div class="card-text">
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan.</p>
+                    </div>
+                </a>
+
+                <a href="entry-2.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
+                    <div class="card-text">
+                        <h2>Lorem Ipsum</h2>
+                    </div>
+                </a>
+
+                <a href="entry-3.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
+                    <div class="card-text">
+                        <h2>Lorem Ipsum</h2>
+                    </div>
+                </a>
+
+                <a href="entry-4.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
+                    <div class="card-text">
+                        <h2>Lorem Ipsum</h2>
+                    </div>
+                </a>
+
+                <a href="aboutus.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
+                    <div class="card-text">
+                        <h2>About Us</h2>
+                    </div>
+                </a>
+
             </div>
         </main>
     </div>
