@@ -12,21 +12,20 @@
             font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 2em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
+
 
         .container {
             max-width: 1920px;
             width: 100%;
+            margin: 0 auto; /* Add this line to center the container */
         }
 
-        /* Header Section */
+
+        /* --- Header Section (Copied from index.html) --- */
         header {
             display: flex;
-            align-items: center; /* Vertically align logo, text, and nav */
+            align-items: center;
             justify-content: space-between;
             margin-bottom: 0.5em;
         }
@@ -36,15 +35,14 @@
             align-items: center;
         }
 
-        /* UPDATED: Logo Styles */
         .logo {
-            margin-right: 1.5em; /* Increased spacing */
-            width: 80px; /* Adjust the width of your logo as needed */
+            margin-right: 1.5em;
+            width: 80px;
         }
 
         .logo img {
-            width: 100%; /* Makes the image fill the container */
-            height: auto; /* Maintains the image's aspect ratio */
+            width: 100%;
+            height: auto;
         }
         
         .title-section {
@@ -67,50 +65,41 @@
             color: #555;
         }
 
-        /* UPDATED: Navigation Bar Styles */
-        nav {
-            /* This can be left empty or removed entirely */
-        }
-
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
             display: flex;
-            gap: 20px; /* Space between nav items */
+            gap: 20px;
         }
 
         nav a {
             text-decoration: none;
-            color: #8B0000; /* Use the red accent color for text */
+            color: #780000;
             font-weight: bold;
             font-size: 1.1em;
             padding: 5px;
-            transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #333; /* Darken text on hover */
-            text-decoration: underline;
-        }
-
-        /* UPDATED: Horizontal Rule */
         hr {
             border: 0;
             height: 2px;
-            background-color: #8B0000;
-            margin: 0.5em 0 2em 0; /* Adjusted margin for new position */
+            background-color: #780000;
+            margin: 0.5em 0 2em 0;
         }
+        /* --- End of Header Section --- */
 
         /* Main Content Section */
         .content-box {
             background-color: #00334e; /* Dark teal/blue background */
             color: #f0f0f0; /* Off-white text for better readability */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             padding: 2em;
             display: flex;
             align-items: flex-start;
             max-width: 900px;       /* Sets a specific maximum width for the box */
-            margin: 0 auto;         /* Centers the box horizontally */
+            margin: 0 auto;
+            border-radius: 8px;         /* Centers the box horizontally */
             margin-bottom: 4em; /* Adjust this value to increase or decrease the space */
     /* --- Add these lines --- */
             text-decoration: none; /* Removes the default underline from the link */
@@ -121,6 +110,7 @@
         .content-box:hover {
             transform: scale(1.02); /* Slightly enlarges the box on hover */
             cursor: pointer; /* Changes the mouse cursor to a pointer */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .image-placeholder {
@@ -165,9 +155,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="publications.html">Publications</a></li>  
+                    <li><a href="aboutus.html">Who We Are</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
