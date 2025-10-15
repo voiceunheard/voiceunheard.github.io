@@ -7,28 +7,27 @@
     <style>
         /* General Body Styles */
         body {
-            background-color: #FDF5E6; /* Light, creamy beige background from index.html */
+            background-color: #FDF5E6; /* A light, creamy beige background */
             font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 2em;
         }
 
+
         .container {
-            max-width: 900px;
-            margin: 0 auto; /* Center the main container */
+            max-width: 1920px;
             width: 100%;
+            margin: 0 auto; /* Add this line to center the container */
         }
 
-        /* --- HEADER STYLES (WITH CHANGES FOR ELONGATION) --- */
+        /* --- Header Section (Copied from index.html) --- */
         header {
             display: flex;
             align-items: center;
-            /* CHANGED: This pushes the logo/title and nav to opposite ends */
-            justify-content: space-between; 
+            justify-content: space-between;
             margin-bottom: 0.5em;
         }
-
-        /* This new wrapper is needed to keep the logo and title together */
+        
         .header-left {
             display: flex;
             align-items: center;
@@ -43,7 +42,7 @@
             width: 100%;
             height: auto;
         }
-
+        
         .title-section {
             display: flex;
             flex-direction: column;
@@ -52,17 +51,18 @@
         h1 {
             font-size: 2.5em;
             margin: 0;
+            padding: 0;
             color: #333;
         }
 
         .tagline {
             font-size: 1.2em;
             margin: 0;
+            padding: 0;
             font-style: italic;
             color: #555;
         }
 
-        /* REMOVED: "margin-left: auto;" is no longer needed on the nav element */
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -73,25 +73,19 @@
 
         nav a {
             text-decoration: none;
-            color: #8B0000;
+            color: #780000;
             font-weight: bold;
             font-size: 1.1em;
             padding: 5px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #333;
-            text-decoration: underline;
         }
 
         hr {
             border: 0;
             height: 2px;
-            background-color: #8B0000;
+            background-color: #780000;
             margin: 0.5em 0 2em 0;
         }
-        /* --- END OF HEADER STYLES --- */
+        /* --- End of Header Section --- */
 
 
         /* --- PUBLICATION ENTRY STYLES --- */
@@ -115,6 +109,9 @@
             background-color: #E6F4FF; /* Light blue background */
             border: 1px solid #B0C4DE; /* Slightly darker blue border */
             padding: 2em;
+            /* --- ADDED: Constrains the width of the entry box and centers it --- */
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .entry-box h2 {
@@ -155,7 +152,7 @@
         <header>
             <div class="header-left">
                 <div class="logo">
-                    <img src="your-logo.png" alt="VoiceUnheard Logo">
+                    <img src="vu_logo.png" alt="VoiceUnheard Logo">
                 </div>
                 <div class="title-section">
                     <h1>VoiceUnheard</h1>
@@ -166,9 +163,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Publication</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="publications.html">Publications</a></li>  
+                    <li><a href="aboutus.html">Who We Are</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -176,7 +173,7 @@
         <hr>
 
         <main>
-            <a href="#" class="back-button">&lt;- Back to "Publications"</a>
+            <a href="publications.html" class="back-button">&lt;- Back to "Publications"</a>
 
             <article class="entry-box">
                 <h2>Lorem Ipsum Dolor Sit Amet</h2>
