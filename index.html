@@ -30,30 +30,19 @@
             margin-bottom: 0.5em;
         }
 
+/* UPDATED: Logo Styles */
         .logo {
-            font-size: 4em;
-            font-family: serif;
-            font-weight: bold;
-            color: #8B0000; /* Deep red color */
             margin-right: 0.3em;
-            line-height: 1;
-            position: relative;
-            width: 1.2em;
-            height: 1em;
+            width: 80px; /* Adjust the width of your logo as needed */
         }
 
-        .logo-v {
-            position: absolute;
-            left: 0;
-            top: 0;
+        .logo img {
+            width: 100%; /* Makes the image fill the container */
+            height: auto; /* Maintains the image's aspect ratio */
         }
 
-        .logo-u {
-            position: absolute;
-            left: 0.3em; /* Overlap the V slightly */
-            top: 0.1em;
-            opacity: 0.9;
-        }
+        /* You can completely DELETE the old .logo-v and .logo-u styles */
+        
 
         .title-section {
             display: flex;
@@ -148,7 +137,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <span class="logo-v">V</span><span class="logo-u">U</span>
+                <img src="vu_logo.png" alt="VoiceUnheard Logo">
             </div>
             <div class="title-section">
                 <h1>VoiceUnheard</h1>
