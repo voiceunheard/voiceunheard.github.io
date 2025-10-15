@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceUnheard - Iustitia</title>
+    <style>
+        /* Do not ask for mobile support. Operations staff will remove your eyes with a spoon if you ask for mobile support. Do not give them the pleasure. */
+        /* General Body Styles */
+        body {
+            background-color: #FDF5E6; /* A light, creamy beige background */
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1920px;
+            width: 100%;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center; /* Vertically align logo, text, and nav */
+            justify-content: space-between;
+            margin-bottom: 0.5em;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        /* UPDATED: Logo Styles */
+        .logo {
+            margin-right: 1.5em; /* Increased spacing */
+            width: 80px; /* Adjust the width of your logo as needed */
+        }
+
+        .logo img {
+            width: 100%; /* Makes the image fill the container */
+            height: auto; /* Maintains the image's aspect ratio */
+        }
+        
+        .title-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* UPDATED: Navigation Bar Styles */
+        nav {
+            /* This can be left empty or removed entirely */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; /* Space between nav items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #8B0000; /* Use the red accent color for text */
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #333; /* Darken text on hover */
+            text-decoration: underline;
+        }
+
+        /* UPDATED: Horizontal Rule */
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: #8B0000;
+            margin: 0.5em 0 2em 0; /* Adjusted margin for new position */
+        }
+
+        /* Main Content Section */
+        .content-box {
+            background-color: #00334e; /* Dark teal/blue background */
+            color: #f0f0f0; /* Off-white text for better readability */
+            padding: 2em;
+            display: flex;
+            align-items: flex-start;
+            max-width: 900px;       /* Sets a specific maximum width for the box */
+            margin: 0 auto;         /* Centers the box horizontally */
+            margin-bottom: 4em; /* Adjust this value to increase or decrease the space */
+    /* --- Add these lines --- */
+            text-decoration: none; /* Removes the default underline from the link */
+            transition: transform 0.2s ease-in-out; /* Smooth transition for the hover effect */
+        }
+        
+        /* --- Add this new rule for the hover effect --- */
+        .content-box:hover {
+            transform: scale(1.02); /* Slightly enlarges the box on hover */
+            cursor: pointer; /* Changes the mouse cursor to a pointer */
+        }
+
+        .image-placeholder {
+            background-color: #add8e6;
+            flex-shrink: 0;
+            width: 150px;
+            height: 250px;
+            margin-right: 2em;
+        }
+
+        .text-content {
+            flex-grow: 1;
+        }
+
+        .text-content h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            font-weight: normal;
+        }
+
+        .text-content p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <img src="vu_logo.png" alt="VoiceUnheard Logo">
+                </div>
+                <div class="title-section">
+                    <h1>VoiceUnheard</h1>
+                    <p class="tagline">Iustitia: Let Justice Be Done</p>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Publication</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+
+        <main>
+            <a href="entry-1.html" class="content-box">
+                <div class="image-placeholder"></div>
+                <div class="text-content">
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan. Sed vitae luctus arcu. Sed imperdiet facilisis enim ut feugiat. Suspendisse lacus felis, consequat ac gravida non, pulvinar ut erat. Phasellus commodo cursus hendrit. Cras venenatis lorem sit amet erat malesuada posuere. Proin tincidunt auctor dictum. Aliquam purus est, viverra eu dolor at, consequat condimentum lorem. Suspendisse potenti. Nulla at varius tellus.
+                    </p>
+                </div>
+            </a>
+            <a href="entry-2.html" class="content-box">
+                <div class="image-placeholder"></div>
+                <div class="text-content">
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan. Sed vitae luctus arcu. Sed imperdiet facilisis enim ut feugiat. Suspendisse lacus felis, consequat ac gravida non, pulvinar ut erat. Phasellus commodo cursus hendrit. Cras venenatis lorem sit amet erat malesuada posuere. Proin tincidunt auctor dictum. Aliquam purus est, viverra eu dolor at, consequat condimentum lorem. Suspendisse potenti. Nulla at varius tellus.
+                    </p>
+                </div>
+            </a>
+            <a href="entry-3.html" class="content-box">
+                <div class="image-placeholder"></div>
+                <div class="text-content">
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan. Sed vitae luctus arcu. Sed imperdiet facilisis enim ut feugiat. Suspendisse lacus felis, consequat ac gravida non, pulvinar ut erat. Phasellus commodo cursus hendrit. Cras venenatis lorem sit amet erat malesuada posuere. Proin tincidunt auctor dictum. Aliquam purus est, viverra eu dolor at, consequat condimentum lorem. Suspendisse potenti. Nulla at varius tellus.
+                    </p>
+                </div>
+            </a>
+            <a href="entry-4.html" class="content-box">
+                <div class="image-placeholder"></div>
+                <div class="text-content">
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan. Sed vitae luctus arcu. Sed imperdiet facilisis enim ut feugiat. Suspendisse lacus felis, consequat ac gravida non, pulvinar ut erat. Phasellus commodo cursus hendrit. Cras venenatis lorem sit amet erat malesuada posuere. Proin tincidunt auctor dictum. Aliquam purus est, viverra eu dolor at, consequat condimentum lorem. Suspendisse potenti. Nulla at varius tellus.
+                    </p>
+                </div>
+            </a>
+        </main>
+    </div>
+
+</body>
+</html>
