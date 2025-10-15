@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceUnheard - Iustitia</title>
+    <style>
+        /* General Body Styles */
+        body {
+            background-color: #FDF5E6; /* A light, creamy beige background */
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center; /* Vertically align logo, text, and nav */
+            margin-bottom: 0.5em;
+        }
+
+        .logo {
+            font-size: 4em;
+            font-family: serif;
+            font-weight: bold;
+            color: #8B0000; /* Deep red color */
+            margin-right: 0.3em;
+            line-height: 1;
+            position: relative;
+            width: 1.2em;
+            height: 1em;
+        }
+
+        .logo-v {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .logo-u {
+            position: absolute;
+            left: 0.3em; /* Overlap the V slightly */
+            top: 0.1em;
+            opacity: 0.9;
+        }
+
+        .title-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* UPDATED: Navigation Bar Styles */
+        nav {
+            margin-left: auto; /* Push the nav to the far right of the header */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; /* Space between nav items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #8B0000; /* Use the red accent color for text */
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #333; /* Darken text on hover */
+            text-decoration: underline;
+        }
+
+        /* UPDATED: Horizontal Rule */
+        hr {
+            border: 0;
+            height: 2px;
+            background-color: #8B0000;
+            margin: 0.5em 0 2em 0; /* Adjusted margin for new position */
+        }
+
+        /* Main Content Section */
+        .content-box {
+            background-color: #00334e; /* Dark teal/blue background */
+            color: #f0f0f0; /* Off-white text for better readability */
+            padding: 2em;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .image-placeholder {
+            background-color: #add8e6;
+            flex-shrink: 0;
+            width: 150px;
+            height: 250px;
+            margin-right: 2em;
+        }
+
+        .text-content {
+            flex-grow: 1;
+        }
+
+        .text-content h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            font-weight: normal;
+        }
+
+        .text-content p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-v">V</span><span class="logo-u">U</span>
+            </div>
+            <div class="title-section">
+                <h1>VoiceUnheard</h1>
+                <p class="tagline">Iustitia: Let Justice Be Done</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Publication</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <div class="content-box">
+                <div class="image-placeholder"></div>
+                <div class="text-content">
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan. Sed vitae luctus arcu. Sed imperdiet facilisis enim ut feugiat. Suspendisse lacus felis, consequat ac gravida non, pulvinar ut erat. Phasellus commodo cursus hendrit. Cras venenatis lorem sit amet erat malesuada posuere. Proin tincidunt auctor dictum. Aliquam purus est, viverra eu dolor at, consequat condimentum lorem. Suspendisse potenti. Nulla at varius tellus.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
