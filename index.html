@@ -21,7 +21,7 @@
         }
 
 
-        /* --- Header Section (Copied from index.html) --- */
+        /* --- Header Section --- */
         header {
             display: flex;
             align-items: center;
@@ -98,7 +98,7 @@
             margin: 0 auto;
         }
 
-        /* --- Clickable Card Styles (UPDATED FOR IMAGES) --- */
+        /* --- Clickable Card Styles --- */
         .card {
             display: block;
             position: relative;
@@ -152,69 +152,41 @@
             opacity: 0.9;
         }
 
-        /* --- Dropdown Menu Styles --- */
+        /* --- UPDATED: Dropdown Menu Styles --- */
 
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
-        /* THIS IS THE CORRECTED RULE */
         .dropdown-content {
             display: none; /* Initially hidden */
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 500px;
+            min-width: 250px; /* Narrower width for single column */
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             border-radius: 8px;
-            padding: 1em;
+            padding: 0.5em 0; /* Adjusted padding */
             left: 50%;
             transform: translateX(-50%);
-            grid-template-columns: 1fr 1fr;
-            gap: 1em;
         }
 
         .dropdown-content.show {
-            display: grid; 
+            display: block; /* Changed from grid to block */
         }
 
         .dropdown-item {
-            display: flex;
-            align-items: center;
-            padding: 0.75em;
-            border-radius: 6px;
+            display: block; /* Each item is a block element */
+            padding: 0.75em 1.5em; /* Adjusted padding for a list item */
             transition: background-color 0.2s ease;
             text-decoration: none;
             color: #333;
+            font-size: 0.95em;
         }
 
         .dropdown-item:hover {
             background-color: #e0e6eb;
-        }
-
-        .dropdown-item .item-image {
-            width: 60px;
-            height: 60px;
-            flex-shrink: 0;
-            margin-right: 1em;
-            border-radius: 4px;
-            background-color: #ccc;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .dropdown-item .item-text h4 {
-            margin: 0 0 0.25em 0;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        .dropdown-item .item-text p {
-            margin: 0;
-            font-size: 0.85em;
-            line-height: 1.4;
-            color: #555;
         }
 
     </style>
@@ -241,38 +213,10 @@
                         <a href="publications.html">Publications</a>
                         
                         <div class="dropdown-content">
-                            
-                            <a href="entry-1.html" class="dropdown-item">
-                                <div class="item-image" style="background-image: url('images/home-content-placeholderimage-small.png');"></div>
-                                <div class="item-text">
-                                    <h4>Entry Title 1</h4>
-                                    <p>A short description of the first publication entry.</p>
-                                </div>
-                            </a>
-                            
-                            <a href="entry-2.html" class="dropdown-item">
-                                <div class="item-image" style="background-image: url('images/home-content-placeholderimage.png');"></div>
-                                <div class="item-text">
-                                    <h4>Entry Title 2</h4>
-                                    <p>A short description of the second publication entry.</p>
-                                </div>
-                            </a>
-
-                            <a href="entry-3.html" class="dropdown-item">
-                                <div class="item-image" style="background-image: url('images/home-content-placeholderimage.png');"></div>
-                                <div class="item-text">
-                                    <h4>Entry Title 3</h4>
-                                    <p>A short description of the third publication entry.</p>
-                                </div>
-                            </a>
-
-                            <a href="entry-4.html" class="dropdown-item">
-                                <div class="item-image" style="background-image: url('images/home-content-placeholderimage.png');"></div>
-                                <div class="item-text">
-                                    <h4>Entry Title 4</h4>
-                                    <p>A short description of the fourth publication entry.</p>
-                                </div>
-                            </a>
+                            <a href="entry-1.html" class="dropdown-item">Entry Title 1</a>
+                            <a href="entry-2.html" class="dropdown-item">Entry Title 2</a>
+                            <a href="entry-3.html" class="dropdown-item">Entry Title 3</a>
+                            <a href="entry-4.html" class="dropdown-item">Entry Title 4</a>
                         </div>
                     </li>
                     
