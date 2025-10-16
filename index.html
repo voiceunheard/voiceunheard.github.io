@@ -154,37 +154,31 @@
 
         /* --- Dropdown Menu Styles --- */
 
-        /* The container for the dropdown. Position relative is crucial. */
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
-        /* The dropdown content itself. Hidden by default. */
+        /* THIS IS THE CORRECTED RULE */
         .dropdown-content {
             display: none; /* Initially hidden */
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 500px; /* Adjust width as needed */
+            min-width: 500px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             border-radius: 8px;
             padding: 1em;
-            left: 50%; /* Center the dropdown */
-            transform: translateX(-50%); /* Fine-tune the centering */
-            
-            /* Layout for the 4 content boxes */
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 2x2 grid */
+            left: 50%;
+            transform: translateX(-50%);
+            grid-template-columns: 1fr 1fr;
             gap: 1em;
         }
 
-        /* This class will be added by JavaScript to show the menu */
         .dropdown-content.show {
             display: grid; 
         }
 
-        /* Styling for each clickable box inside the dropdown */
         .dropdown-item {
             display: flex;
             align-items: center;
@@ -199,7 +193,6 @@
             background-color: #e0e6eb;
         }
 
-        /* Image placeholder style */
         .dropdown-item .item-image {
             width: 60px;
             height: 60px;
@@ -211,7 +204,6 @@
             background-position: center;
         }
 
-        /* Text content within the box */
         .dropdown-item .item-text h4 {
             margin: 0 0 0.25em 0;
             font-size: 1em;
