@@ -88,72 +88,7 @@
         }
         /* --- End of Header Section --- */
 
-
-        /* --- Homepage Grid Layout --- */
-        .homepage-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 2em;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* --- Clickable Card Styles --- */
-        .card {
-            display: block;
-            position: relative;
-            text-decoration: none;
-            color: white;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            
-            background-size: cover;
-            background-position: center;
-            
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            min-height: 250px;
-        }
-
-        .card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .card.featured {
-            grid-column: 1 / 3; 
-            min-height: 350px;
-        }
-
-        /* Transparent Text Overlay */
-        .card-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 1em 1.5em;
-            transition: background 0.3s ease; 
-        }
-
-        .card:hover .card-text {
-            background: rgba(0, 0, 0, 0.75);
-        }
-
-        .card-text h2 {
-            margin: 0;
-            font-size: 1.8em;
-            line-height: 1.2;
-        }
-
-        .card-text p {
-            margin: 0.25em 0 0 0;
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-
-        /* --- UPDATED: Dropdown Menu Styles --- */
-
+        /* --- Dropdown Menu Styles --- */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -163,22 +98,22 @@
             display: none; /* Initially hidden */
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 250px; /* Narrower width for single column */
+            min-width: 250px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             border-radius: 8px;
-            padding: 0.5em 0; /* Adjusted padding */
+            padding: 0.5em 0;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .dropdown-content.show {
-            display: block; /* Changed from grid to block */
+            display: block;
         }
 
         .dropdown-item {
-            display: block; /* Each item is a block element */
-            padding: 0.75em 1.5em; /* Adjusted padding for a list item */
+            display: block;
+            padding: 0.75em 1.5em;
             transition: background-color 0.2s ease;
             text-decoration: none;
             color: #333;
@@ -187,6 +122,93 @@
 
         .dropdown-item:hover {
             background-color: #e0e6eb;
+        }
+        /* --- End of Dropdown Styles --- */
+
+
+        /* --- Homepage Content Styles (from idx_1.jpg) --- */
+        .main-content {
+            text-align: center;
+        }
+
+        .main-logo {
+            width: 10rem; /* 160px */
+            height: auto;
+            margin: 1em auto 0 auto;
+        }
+
+        .main-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #780000;
+            margin: 0.25em 0 1.5em 0; /* Added space below */
+        }
+        
+        .intro-text {
+            max-width: 54rem; /* 864px */
+            margin: 1.5em auto 1.5em auto; /* Added space above and below */
+            text-align: center;
+            color: #780000; 
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* --- Divider line style --- */
+        .main-divider {
+            border: 0;
+            height: 1px; /* Half of the 2px header hr */
+            background-color: #780000;
+            max-width: 54rem; /* 864px */
+            margin: 0 auto; /* Center it */
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 3rem; /* 48px */
+            margin-top: 2.5em; /* 40px */
+        }
+
+        .nav-button {
+            width: 16rem; /* 256px */
+            text-decoration: none;
+            border-radius: 0.5rem; /* 8px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden; /* To keep the rounded corners */
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-button-image {
+            height: 7rem; /* 112px */
+            /* Placeholder gradient from image */
+            background-image: linear-gradient(to bottom, #FFD700, #FFA500); 
+        }
+
+        /* NEW: Specific style for the "Contact Us" button's image area */
+        .nav-button.contact-us .nav-button-image {
+            background-image: none; /* No gradient for this one */
+            background-color: #FDF5E6; /* Match body background */
+        }
+
+
+        .nav-button-text {
+            background-color: #780000; /* Dark red */
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 0.75rem 0.5rem; /* 12px top/bottom */
+            height: 3rem; 
+            box-sizing: border-box; /* Include padding in height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
     </style>
@@ -211,7 +233,6 @@
                     
                     <li class="dropdown">
                         <a href="publications.html">Publications</a>
-                        
                         <div class="dropdown-content">
                             <a href="entry-1.html" class="dropdown-item">Entry Title 1</a>
                             <a href="entry-2.html" class="dropdown-item">Entry Title 2</a>
@@ -229,43 +250,35 @@
         <hr>
 
         <main>
-            <div class="homepage-grid">
+            <div class="main-content">
                 
-                <a href="entry-1.html" class="card featured" style="background-image: url('images/home-content-placeholderimage-small.png');">
-                    <div class="card-text">
-                        <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque turpis ipsum, eget tincidunt nisi gravida accumsan.</p>
-                    </div>
-                </a>
+                <img src="images/vu_logo.png" alt="VoiceUnheard Logo" class="main-logo">
+                
+                <h2 class="main-title">VoiceUnheard</h2>
 
-                <a href="entry-2.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
-                    <div class="card-text">
-                        <h2>Lorem Ipsum</h2>
-                    </div>
-                </a>
+                <hr class="main-divider"> 
+                <p class="intro-text">
+                    VoiceUnheard was established with the clear purpose of educating the mass and spreading awareness about the countless injustices that are happening internationally. We will be analyzing and explaining different issues that transcend international borders from the perspectives of Generation Z. Whether it is migration rights or children's rights, we will delve deep and make sure we can help to spread the unheard voices around the globe.
+                </p>
 
-                <a href="entry-3.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
-                    <div class="card-text">
-                        <h2>Lorem Ipsum</h2>
-                    </div>
-                </a>
-
-                <a href="entry-4.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
-                    <div class="card-text">
-                        <h2>Lorem Ipsum</h2>
-                    </div>
-                </a>
-
-                <a href="aboutus.html" class="card" style="background-image: url('images/home-content-placeholderimage.png');">
-                    <div class="card-text">
-                        <h2>About Us</h2>
-                    </div>
-                </a>
-
+                <hr class="main-divider"> 
+                <div class="nav-buttons">
+                    <a href="publications.html" class="nav-button">
+                        <div class="nav-button-image"></div>
+                        <span class="nav-button-text">Publications</span>
+                    </a>
+                    <a href="aboutus.html" class="nav-button">
+                        <div class="nav-button-image"></div>
+                        <span class="nav-button-text">Who We Are</span>
+                    </a>
+                    <a href="contactus.html" class="nav-button">
+                        <div class="nav-button-image"></div>
+                        <span class="nav-button-text">Contact Us</span>
+                </div>
             </div>
         </main>
     </div>
-    
+
     <script>
         // Find the dropdown container element
         const dropdown = document.querySelector('.dropdown');
