@@ -88,6 +88,43 @@
         }
         /* --- End of Header Section --- */
 
+        /* --- Dropdown Menu Styles --- */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none; /* Initially hidden */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 8px;
+            padding: 0.5em 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dropdown-content.show {
+            display: block;
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.75em 1.5em;
+            transition: background-color 0.2s ease;
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .dropdown-item:hover {
+            background-color: #e0e6eb;
+        }
+        /* --- End of Dropdown Styles --- */
+
         .about-us-section h2 {
             font-size: 2.2em;
             color: #00334e; /* Dark teal/blue for section titles */
@@ -157,7 +194,17 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>  
+                    
+                    <li class="dropdown">
+                        <a href="publications.html">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="entry-1.html" class="dropdown-item">Topic 1</a>
+                            <a href="entry-2.html" class="dropdown-item">Topic 2</a>
+                            <a href="entry-3.html" class="dropdown-item">Topic 3</a>
+                            <a href="entry-4.html" class="dropdown-item">Topic 4</a>
+                        </div>
+                    </li>
+                    
                     <li><a href="aboutus.html">Who We Are</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
@@ -194,6 +241,22 @@
             </div>
         </main>
     </div>
+
+    <script>
+        // Find the dropdown container element
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Show the dropdown when the mouse enters the 'Publications' link area
+        dropdown.addEventListener('mouseenter', function() {
+            dropdownContent.classList.add('show');
+        });
+
+        // Hide the dropdown when the mouse leaves the area
+        dropdown.addEventListener('mouseleave', function() {
+            dropdownContent.classList.remove('show');
+        });
+    </script>
 
 </body>
 </html>
