@@ -100,7 +100,20 @@
         </div>
         <nav><ul class="flex space-x-8">
             <li><a href="#" data-val="0" class="nav-link text-[#780000] font-bold text-lg relative">Home</a></li>
-            <li><a href="#" data-val="1" class="nav-link text-[#780000] font-bold text-lg relative">Publications</a></li>
+            
+            <!-- Dropdown Menu Added Here -->
+            <li class="relative group">
+                <a href="#" data-val="1" class="nav-link text-[#780000] font-bold text-lg relative">Publications</a>
+                <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-[#FDF5E6] rounded-md shadow-lg hidden group-hover:block ring-1 ring-black ring-opacity-5">
+                    <div class="py-1">
+                        <a href="#" data-val="10" class="block px-4 py-2 text-sm text-[#780000] hover:bg-gray-200">Topic 1</a>
+                        <a href="#" data-val="20" class="block px-4 py-2 text-sm text-[#780000] hover:bg-gray-200">Topic 2</a>
+                        <a href="#" data-val="30" class="block px-4 py-2 text-sm text-[#780000] hover:bg-gray-200">Topic 3</a>
+                        <a href="#" data-val="40" class="block px-4 py-2 text-sm text-[#780000] hover:bg-gray-200">Topic 4</a>
+                    </div>
+                </div>
+            </li>
+            
             <li><a href="#" data-val="2" class="nav-link text-[#780000] font-bold text-lg relative">Who We Are</a></li>
             <li><a href="#" data-val="3" class="nav-link text-[#780000] font-bold text-lg relative">Contact Us</a></li>
         </ul></nav>
@@ -217,4 +230,3 @@
     </script>
 </body>
 </html>
-
