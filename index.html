@@ -191,10 +191,9 @@
             background-image: linear-gradient(to bottom, #FFD700, #FFA500); 
         }
 
-        /* NEW: Specific style for the "Contact Us" button's image area */
         .nav-button.contact-us .nav-button-image {
-            background-image: none; /* No gradient for this one */
-            background-color: #FDF5E6; /* Match body background */
+            background-image: none;
+            background-color: #FDF5E6;
         }
 
 
@@ -209,6 +208,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        /* --- NEW: Prototype Button Styles --- */
+        .prototype-button {
+            position: fixed;
+            bottom: 2em;
+            right: 2em;
+            background-color: #780000;
+            color: #FDF5E6;
+            padding: 0.75em 1.5em;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .prototype-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
 
     </style>
@@ -274,6 +293,7 @@
                     <a href="contactus.html" class="nav-button">
                         <div class="nav-button-image"></div>
                         <span class="nav-button-text">Contact Us</span>
+                    </a>
                 </div>
             </div>
         </main>
@@ -294,6 +314,9 @@
             dropdownContent.classList.remove('show');
         });
     </script>
+
+    <!-- NEW: Prototype Interface Button -->
+    <a href="https://voiceunheard.com/idx1.html" target="_blank" rel="noopener noreferrer" class="prototype-button">Prototype Interface ></a>
 
 </body>
 </html>
