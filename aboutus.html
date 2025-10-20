@@ -126,7 +126,7 @@
         /* --- End of Dropdown Styles --- */
 
         .about-us-section {
-            max-width: 1044px; /* UPDATED to match bordered-content-box width + padding + border */
+            max-width: 1044px; 
             margin: 0 auto;
         }
         
@@ -151,7 +151,7 @@
         .section-title-on-border::after {
             content: '';
             flex-grow: 1;
-            background-color: #FDF5E6;
+            background-color: #780000;
             height: 2px;
         }
 
@@ -187,11 +187,11 @@
         .team-member-card .member-photo {
             width: 120px;
             height: 120px;
-            background-color: #add8e6; /* Light blue placeholder */
             border-radius: 50%; /* Circular image */
             margin-bottom: 1em;
             border: 3px solid #00334e; /* Border matching the main content box */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            object-fit: cover; /* Ensures image covers the area without distortion */
         }
 
         .team-member-card h3 {
@@ -228,10 +228,10 @@
                     <li class="dropdown">
                         <a href="publications.html">Publications</a>
                         <div class="dropdown-content">
-                            <a href="topic_1.html" class="dropdown-item">Entry Title 1</a>
-                            <a href="topic_2.html" class="dropdown-item">Entry Title 2</a>
-                            <a href="topic_3.html" class="dropdown-item">Entry Title 3</a>
-                            <a href="topic_4.html" class="dropdown-item">Entry Title 4</a>
+                            <a href="entry-1.html" class="dropdown-item">Topic 1</a>
+                            <a href="entry-2.html" class="dropdown-item">Topic 2</a>
+                            <a href="entry-3.html" class="dropdown-item">Topic 3</a>
+                            <a href="entry-4.html" class="dropdown-item">Topic 4</a>
                         </div>
                     </li>
                     
@@ -250,24 +250,24 @@
                 <div class="bordered-content-box">
                     <div class="team-grid">
                         <div class="team-member-card">
-                            <div class="member-photo"></div>
-                            <h3>Jane Doe</h3>
-                            <p>Founder & Lead Advocate. With over 20 years of experience, Jane is dedicated to bringing justice to the voiceless.</p>
+                            <img src="images/member1.png" alt="Photo of Emtiar" class="member-photo">
+                            <h3>Emtiar</h3>
+                            <p>Emtiar, is an author at voices unheard, a university student and social justice advocate/ activist with a strong interest in politics, equity, and community leadership. She is dedicated to raising awareness, amplifying voices, and inspiring her generation to take action on issues of justice and equality. You can find her on Linkedin and Instagram.</p>
                         </div>
                         <div class="team-member-card">
-                            <div class="member-photo"></div>
-                            <h3>John Smith</h3>
-                            <p>Senior Legal Counsel. John specializes in human rights law and provides critical support on complex cases.</p>
+                            <img src="images/member2.png" alt="Photo of Tahnoon Al Nahyan" class="member-photo">
+                            <h3>Tahnoon Al Nahyan</h3>
+                            <p>Tahnoon Al Nahyan is an author who writes about social injustice, focusing on the voices and struggles often overlooked in society. His work explores themes of inequality, migration, and human rights, aiming to raise awareness and spark dialogue. Readers can connect with Tahnoon through Instagram or LinkedIn to engage further with his writing and advocacy.</p>
                         </div>
                         <div class="team-member-card">
-                            <div class="member-photo"></div>
-                            <h3>Emily White</h3>
-                            <p>Research Analyst. Emily's meticulous research skills are invaluable in uncovering crucial evidence.</p>
+                            <img src="images/member3.png" alt="Photo of Nahyeon" class="member-photo">
+                            <h3>Nahyeon</h3>
+                            <p>Nahyeon, is an author and one of the founders at VoiceUnheard who is currently a university student majoring in international studies. She is especially interested in social injustices regarding women and children. She has started this with the hopes that it can help to raise awareness and help to spark dialogue among the younger generation. For further inquiries, find her on Instagram or LinkedIn.</p>
                         </div>
                         <div class="team-member-card">
-                            <div class="member-photo"></div>
-                            <h3>Michael Brown</h3>
-                            <p>Community Outreach Coordinator. Michael connects us with communities and ensures our message is heard far and wide.</p>
+                            <img src="images/member4.png" alt="Photo of Jay" class="member-photo">
+                            <h3>Jay</h3>
+                            <p>Jay is an author at VoiceUnheard focusing on areas of political unrest and security issues. He has had a consistent interest in international politics and the social cleavages that influence the dialogue, as well as operations of authoritarian states. He aims to provide an objective view on various topics from around the world. You can contact him on Instagram.</p>
                         </div>
                     </div>
                 </div>
