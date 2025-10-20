@@ -125,20 +125,50 @@
         }
         /* --- End of Dropdown Styles --- */
 
-        .about-us-section h2 {
-            font-size: 2.2em;
-            color: #00334e; /* Dark teal/blue for section titles */
-            text-align: center;
-            margin-bottom: 1.5em;
+        .about-us-section {
+            max-width: 1044px; /* UPDATED to match bordered-content-box width + padding + border */
+            margin: 0 auto;
         }
+        
+        /* --- STYLES for "Text on Border" Effect --- */
+        .section-title-on-border {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: -1.2em; /* Pulls the content box up */
+            position: relative;
+            z-index: 1; /* Ensures title is above the border */
+        }
+        
+        .section-title-on-border span {
+            font-size: 2.2em;
+            color: #00334e;
+            padding: 0 1em; /* Space between text and decorative lines */
+            background-color: #FDF5E6; /* Hides the border behind the text */
+        }
+        
+        .section-title-on-border::before,
+        .section-title-on-border::after {
+            content: '';
+            flex-grow: 1;
+            background-color: #780000;
+            height: 2px;
+        }
+
+        .bordered-content-box {
+            border: 2px solid #780000; /* Red border */
+            border-radius: 8px; /* Slightly rounded corners */
+            margin: 0 auto 2em auto; /* Center it, add bottom margin */
+            padding: 3em 2em 2em 2em; /* Top padding clears the title */
+            background-color: #FDF5E6; /* Ensure background matches body */
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+        }
+        /* --- End of New Styles --- */
 
         .team-grid {
             display: grid;
             grid-template-columns: 1fr 1fr; /* Two columns */
             gap: 30px; /* Space between team member cards */
-            
-            max-width: 1000px; /* Narrows the grid container */
-            margin: 0 auto; /* Centers the narrowed grid on the page */
         }
 
         .team-member-card {
@@ -215,27 +245,30 @@
 
         <main>
             <div class="about-us-section">
-                <h2>Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-member-card">
-                        <div class="member-photo"></div>
-                        <h3>Jane Doe</h3>
-                        <p>Founder & Lead Advocate. With over 20 years of experience, Jane is dedicated to bringing justice to the voiceless.</p>
-                    </div>
-                    <div class="team-member-card">
-                        <div class="member-photo"></div>
-                        <h3>John Smith</h3>
-                        <p>Senior Legal Counsel. John specializes in human rights law and provides critical support on complex cases.</p>
-                    </div>
-                    <div class="team-member-card">
-                        <div class="member-photo"></div>
-                        <h3>Emily White</h3>
-                        <p>Research Analyst. Emily's meticulous research skills are invaluable in uncovering crucial evidence.</p>
-                    </div>
-                    <div class="team-member-card">
-                        <div class="member-photo"></div>
-                        <h3>Michael Brown</h3>
-                        <p>Community Outreach Coordinator. Michael connects us with communities and ensures our message is heard far and wide.</p>
+                <!-- Title is now positioned over the border of the box below -->
+                <h2 class="section-title-on-border"><span>Our Team</span></h2>
+                <div class="bordered-content-box">
+                    <div class="team-grid">
+                        <div class="team-member-card">
+                            <div class="member-photo"></div>
+                            <h3>Jane Doe</h3>
+                            <p>Founder & Lead Advocate. With over 20 years of experience, Jane is dedicated to bringing justice to the voiceless.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div class="member-photo"></div>
+                            <h3>John Smith</h3>
+                            <p>Senior Legal Counsel. John specializes in human rights law and provides critical support on complex cases.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div class="member-photo"></div>
+                            <h3>Emily White</h3>
+                            <p>Research Analyst. Emily's meticulous research skills are invaluable in uncovering crucial evidence.</p>
+                        </div>
+                        <div class="team-member-card">
+                            <div class="member-photo"></div>
+                            <h3>Michael Brown</h3>
+                            <p>Community Outreach Coordinator. Michael connects us with communities and ensures our message is heard far and wide.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,3 +293,4 @@
 
 </body>
 </html>
+
